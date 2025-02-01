@@ -1,0 +1,494 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #1E6FFE;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #1B1BB3;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: regular;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    position: relative; /* Для позиционирования линии */
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Толщина линии */
+    background-color: #000000; /* Цвет линии */
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: inherit; /* Наследуем цвет текста */
+    margin: 15px;
+}
+
+.navbar .logo {
+    height: 60px; /* Высота логотипа */
+    margin-right: 40px; /* Отступ между логотипом и названием */
+}
+
+.navbar .company-name {
+    font-size: 40px;
+    font-weight: regular;
+    color: black;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 40px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+    color: #1E6FFE;
+}
+
+/* Стили для герой-блока */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Фоновый цвет, если нужно */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-image img {
+    border-radius: 15px; /* Закругленные углы для изображения */
+    width: 450px;
+    height: 450px;
+    margin-left: 120px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px; /* Отступ слева */
+    margin-right: 120px;
+}
+
+.hero-content h1 {
+    margin: 10px 0;
+}
+
+.hero-buttons {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #1E6FFE;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1B1BB3;
+}
+
+/* Стили для блока "Почему фитнес так полезен?" */
+.benefits {
+    padding: 50px 20px;
+    background-color: #fff; /* Фоновый цвет */
+    text-align: center;
+}
+
+.benefits-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Отступ между карточками */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+}
+
+.card-image {
+    width: 162px;
+    height: 162px; /* Высота изображения */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+    border-radius: 100%;
+    margin-bottom: 15px; /* Отступ между изображением и текстом */
+    transition: transform 0.3s ease; /* Плавное изменение размера */
+}
+
+.card:hover .card-image {
+    transform: scale(1.05); /* Увеличиваем изображение на 5% */
+}
+
+/* Стили для блока "Что дает фитнес лига?" */
+.fitness-league {
+    padding: 50px 20px;
+    background-color: #fff; /* Фоновый цвет */
+    text-align: center;
+}
+
+.fitness-league h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1E6FFE;
+    margin-bottom: 40px;
+}
+
+.fitness-league-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fitness-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+
+
+.fitness-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.fitness-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.fitness-image img {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px; /* Закругленные углы для изображения */
+}
+
+/* Стили для футера */
+.footer {
+    color: rgb(0, 0, 0);
+    padding: 40px 20px 20px;
+}
+
+.footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Толщина линии */
+    background-color: #000000; /* Цвет линии */
+    margin-bottom: 40px; /* Отступ между линией и содержимым футера */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 250px;
+}
+
+.footer-logo-img {
+    height: 60px; /* Высота логотипа */
+    margin-bottom: 10px;
+}
+
+.footer-company-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    max-width: 200px;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-social a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #1E6FFE;
+}
+
+/* Стили для кнопки "Наверх" */
+.scroll-to-top {
+    display: none; /* Скрываем кнопку по умолчанию */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #1E6FFE;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #1B1BB3;
+}
+
+.scroll-to-top.visible {
+    display: block; /* Показываем кнопку, когда она видима */
+}
+
+/* Стили для блока с рейтингом */
+.ratings {
+    padding: 50px 20px;
+    background-color: #fff; /* Фоновый цвет */
+    text-align: center;
+}
+
+.ratings h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1E6FFE;
+    margin-bottom: 40px;
+}
+
+/* Стили для таблицы */
+.ratings-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.ratings-table th, .ratings-table td {
+    padding: 15px;
+    border: 1px solid #ddd; /* Границы ячеек */
+    text-align: center;
+}
+
+.ratings-table th {
+    background-color: #1E6FFE; /* Цвет фона заголовков */
+    color: white;
+    font-weight: 600;
+}
+
+/* Стили для первых 5 мест */
+.ratings-table .top-5 {
+    background-color: #e6f7ff; /* Светло-голубой цвет */
+}
+
+/* Стили для следующих 5 мест */
+.ratings-table .next-5 {
+    background-color: #fff3e6; /* Светло-оранжевый цвет */
+}
+
+.ratings-table tr:hover {
+    background-color: #f1f1f1; /* Цвет фона при наведении */
+}
+
+/* Стили для блока с информацией о баллах */
+.points-info {
+    padding: 40px 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px; /* Закругленные углы */
+    text-align: center;
+}
+
+.points-list {
+    display: flex; /* Разделяем на две колонки */
+    gap: 100px; /* Отступ между колонками */
+}
+
+.points-column {
+    flex: 1; /* Каждая колонка занимает равное пространство */
+}
+
+.points-list p strong {
+    color: #1B1BB3; /* Цвет для выделения заголовков пунктов */
+}
+
+/* Стили для блока создания команды */
+.create-team {
+    padding: 50px 20px;
+    background-color: #fff; /* Фоновый цвет */
+    text-align: left;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.create-team h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1B1BB3;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1BB3;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input-group textarea {
+    resize: vertical; /* Разрешаем вертикальное изменение размера */
+    min-height: 100px;
+}
+
+.input-group input[type="file"] {
+    padding: 5px;
+}
+
+.create-team h1 {
+    margin-bottom: 60px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #1E6FFE;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1B1BB3;
+}
+
+
+/* Стили для блока "Почему важен активный образ жизни?" */
+.active-lifestyle {
+    padding: 50px 20px;
+    background-color: #fff; /* Фоновый цвет */
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Отступ между карточками */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #f9f9f9; /* Фоновый цвет карточки */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Эффект поднятия карточки */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+    border-radius: 10px; /* Закругленные углы */
+    margin-bottom: 15px; /* Отступ между изображением и текстом */
+}
