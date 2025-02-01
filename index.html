@@ -4,130 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
-    <link rel="stylesheet" href="./styles.css">
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="./index.html" class="logo-container"> <!-- Логотип и название как ссылка -->
-            <img src="./img/Logo.png" alt="Логотип Elevate Fitness" class="logo">
-            <div class="company-name">Elevate Fitness</div>
-        </a>
-        <ul class="nav-links">
-            <li><a href="./rating.html">Рейтинги</a></li>
-            <li><a href="./team.html">Ваша команда</a></li>
-            <li><a href="./acivity_style.html">Активный образ жизни</a></li>
-        </ul>
+    <!-- Навигация с Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/Logo.png" alt="Логотип Elevate Fitness" class="logo" style="height: 40px;">
+                <span class="company-name">Elevate Fitness</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./rating.html">Рейтинги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./team.html">Ваша команда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./acivity_style.html">Активный образ жизни</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Герой-блок -->
-    <section class="hero">
-        <div class="hero-image">
-            <img src="./img/Hero_img.jpg" alt="Фитнес">
-        </div>
-        <div class="hero-content">
-            <h1>Трансформируй Себя.</h1>
-            <h1>Стань Сильнее.</h1>
-            <h1>Присоединяйся к Фитнес-Лиге!</h1>
-            <h2>Найди мотивацию, поддержку и соревновательный дух в нашей фитнес-лиге.</h2>
-            <h2>Тренируйся вместе, достигай большего!</h2>
-            <div class="hero-buttons">
-                <a href="#" class="btn">Регистрация</a>
-                <a href="#" class="btn">Авторизация</a>
+    <section class="hero container-fluid py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1">
+                <img src="./img/Hero_img.jpg" alt="Фитнес" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-2 text-center text-md-start">
+                <h1 class="display-4">Трансформируй Себя.</h1>
+                <h1 class="display-4">Стань Сильнее.</h1>
+                <h1 class="display-4">Присоединяйся к Фитнес-Лиге!</h1>
+                <h2 class="lead">Найди мотивацию, поддержку и соревновательный дух в нашей фитнес-лиге.</h2>
+                <h2 class="lead">Тренируйся вместе, достигай большего!</h2>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-primary btn-lg me-2">Регистрация</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Авторизация</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Блок "Почему фитнес так полезен?" -->
-    <section class="benefits">
-        <h1>Почему фитнес так полезен?</h1>
-        <div class="benefits-cards">
-            <div class="card">
-                <img src="./img/Function_photo_1.jpg" alt="Физическое здоровье" class="card-image">
-                <h2>Улучшение Физического Здоровья</h2>
-                <p>Физическая активность напрямую влияет на работу нашего тела, укрепляя его и снижая риск многих заболеваний.</p>
-            </div>
-            <div class="card">
-                <img src="./img/Function_photo_2.jpg" alt="Психическое здоровье" class="card-image">
-                <h2>Повышение Психического Здоровья</h2>
-                <p>Занятия спортом оказывают положительное влияние на наше настроение, стрессоустойчивость и общее психологическое состояние.</p>
-            </div>
-            <div class="card">
-                <img src="./img/Function_photo_3.jpg" alt="Качество жизни" class="card-image">
-                <h2>Улучшение Качества Жизни</h2>
-                <p>Регулярные физические нагрузки дают нам больше энергии для повседневных задач и активностей.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="fitness-league">
-        <h1>Что дает фитнес лига?</h1>
-        <div class="fitness-league-content">
-            <!-- Первая часть: текст слева, изображение справа -->
-            <div class="fitness-item">
-                <div class="fitness-text">
-                    <h2>Поддержка Сообщества</h2>
-                    <p>Мы создаем дружелюбную атмосферу, где вы сможете найти мотивацию, вдохновение и поддержку на каждом этапе своего пути к успеху. Вместе мы преодолеваем трудности, празднуем победы и вдохновляем друг друга на новые достижения.</p>
-                </div>
-                <div class="fitness-image">
-                    <img src="./img/Card_photo_1.jpg" alt="Поддержка Сообщества">
+    <section class="benefits container py-5">
+        <h1 class="text-center mb-5">Почему фитнес так полезен?</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./img/Function_photo_1.jpg" alt="Физическое здоровье" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title">Улучшение Физического Здоровья</h2>
+                        <p class="card-text">Физическая активность напрямую влияет на работу нашего тела, укрепляя его и снижая риск многих заболеваний.</p>
+                    </div>
                 </div>
             </div>
-    
-            <!-- Вторая часть: изображение слева, текст справа -->
-            <div class="fitness-item reverse">
-                <div class="fitness-image">
-                    <img src="./img/Card_photo_2.jpg" alt="Трансформация Тела">
-                </div>
-                <div class="fitness-text">
-                    <h2>Трансформация Тела</h2>
-                    <p>Наша фитнес-лига поможет вам достичь желаемых физических результатов – будь то снижение веса, наращивание мышечной массы, улучшение выносливости или повышение силы. Вы почувствуете себя сильнее, энергичнее и увереннее в себе!</p>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./img/Function_photo_2.jpg" alt="Психическое здоровье" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title">Повышение Психического Здоровья</h2>
+                        <p class="card-text">Занятия спортом оказывают положительное влияние на наше настроение, стрессоустойчивость и общее психологическое состояние.</p>
+                    </div>
                 </div>
             </div>
-    
-            <!-- Третья часть: текст слева, изображение справа -->
-            <div class="fitness-item">
-                <div class="fitness-text">
-                    <h2>Соревновательный Дух</h2>
-                    <p>Вы сможете бросить вызов себе, превзойти собственные ограничения, почувствовать азарт борьбы и насладиться вкусом победы. Участие в соревнованиях станет отличной мотивацией для достижения новых высот в фитнесе и развитии личностных качеств.</p>
-                </div>
-                <div class="fitness-image">
-                    <img src="./img/Card_photo_3.jpg" alt="Соревновательный Дух">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./img/Function_photo_3.jpg" alt="Качество жизни" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title">Улучшение Качества Жизни</h2>
+                        <p class="card-text">Регулярные физические нагрузки дают нам больше энергии для повседневных задач и активностей.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="./img/Logo.png" alt="Логотип Elevate Fitness" class="footer-logo-img">
-                <div class="footer-company-name">Elevate Fitness</div>
+    <!-- Блок "Что дает фитнес лига?" -->
+    <section class="fitness-league container py-5">
+        <h1 class="text-center mb-5">Что дает фитнес лига?</h1>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2>Поддержка Сообщества</h2>
+                <p>Мы создаем дружелюбную атмосферу, где вы сможете найти мотивацию, вдохновение и поддержку на каждом этапе своего пути к успеху. Вместе мы преодолеваем трудности, празднуем победы и вдохновляем друг друга на новые достижения.</p>
             </div>
-            <div class="footer-links">
-                <h3>Разделы</h3>
-                <ul>
-                    <li><a href="./rating.html">Рейтинги</a></li>
-                    <li><a href="./team.html">Ваша команда</a></li>
-                    <li><a href="./acivity_style.html">Активный образ жизни</a></li>
-                </ul>
+            <div class="col-md-6">
+                <img src="./img/Card_photo_1.jpg" alt="Поддержка Сообщества" class="img-fluid rounded">
             </div>
-            <div class="footer-contact">
-                <h3>Контакты</h3>
-                <p>Email: info@elevatefitness.com</p>
-                <p>Телефон: +7 (123) 456-78-90</p>
+        </div>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 order-md-2">
+                <h2>Трансформация Тела</h2>
+                <p>Наша фитнес-лига поможет вам достичь желаемых физических результатов – будь то снижение веса, наращивание мышечной массы, улучшение выносливости или повышение силы. Вы почувствуете себя сильнее, энергичнее и увереннее в себе!</p>
             </div>
-            <div class="footer-social">
-                <h3>Социальные сети</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
+            <div class="col-md-6 order-md-1">
+                <img src="./img/Card_photo_2.jpg" alt="Трансформация Тела" class="img-fluid rounded">
             </div>
-            <button id="scrollToTopBtn" class="scroll-to-top">Наверх</button>
+        </div>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2>Соревновательный Дух</h2>
+                <p>Вы сможете бросить вызов себе, превзойти собственные ограничения, почувствовать азарт борьбы и насладиться вкусом победы. Участие в соревнованиях станет отличной мотивацией для достижения новых высот в фитнесе и развитии личностных качеств.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="./img/Card_photo_3.jpg" alt="Соревновательный Дух" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="./img/Logo.png" alt="Логотип Elevate Fitness" class="footer-logo-img" style="height: 40px;">
+                    <div class="footer-company-name">Elevate Fitness</div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Разделы</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="./rating.html">Рейтинги</a></li>
+                        <li><a href="./team.html">Ваша команда</a></li>
+                        <li><a href="./acivity_style.html">Активный образ жизни</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Контакты</h3>
+                    <p>Email: info@elevatefitness.com</p>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Социальные сети</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Подключаем Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
