@@ -504,8 +504,6 @@ p {
     height: 450px;
 }
 .cookie-notification {
-    position: fixed;
-    background-color: rgba(0, 0, 0, .8);
     bottom: 0;
     width: 100%;
     color: white;
