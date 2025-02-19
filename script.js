@@ -33,3 +33,23 @@
             // Здесь можно добавить код для отправки данных на сервер
         }
     }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const cookieNotification = document.querySelector('.cookie-notification');
+        const acceptButton = document.getElementById('acceptCookies');
+    
+        // Проверяем, была ли уже принята cookie
+        if (!Cookies.get('cookiesAccepted')) {
+            cookieNotification.style.display = 'flex'; // Показываем плашку
+        }
+    
+        // Обработчик для кнопки "Принять"
+        if (acceptButton) {
+            acceptButton.addEventListener('click', function() {
+                // Скрываем плашку
+                cookieNotification.style.display = 'none';
+                // Устанавливаем cookie на 30 дней
+                Cookies.set('cookiesAccepted', 'true', { expires: 30 });
+            });
+        }
+    });
