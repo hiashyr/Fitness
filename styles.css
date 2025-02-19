@@ -503,19 +503,40 @@ p {
     width: 450px;
     height: 450px;
 }
+
+/* Стили для плашки */
 .cookie-notification {
+    position: fixed;
     bottom: 0;
-    width: 100%;
-    color: white;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
     padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-.cookie-notification_hidden_yes {
-    display: none;
+
+.cookie-notification p {
+    margin: 0;
+    font-size: 14px;
 }
-.cookie-notification__header {
-    margin-bottom: 10px;
-    font-size: 23px;
+
+.cookie-notification button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
 }
-.cookie-notification__body {
-    margin-bottom: 10px;
+
+.cookie-notification button:hover {
+    background-color: #45a049;
 }
